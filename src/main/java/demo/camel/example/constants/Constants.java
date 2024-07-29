@@ -5,6 +5,8 @@ public class Constants {
 	public static final String RABBIT_MQ_SOURCE = "spring-rabbitmq:amq.direct?routingKey=weather&queues=weather";
 	public static final String RABBIT_MQ_DESTINATION = "spring-rabbitmq:amq.direct?routingKey=weatherEvents&queues=weatherEvents";
 	public static final String RABBIT_MQ_FILE = "file:///C:/Users/Administrator?fileName=weather-events.txt&fileExist=Append";
+	public static final String RABBIT_MQ_MULTICAST_FILE_1 = "file:///C:/Users/Administrator?fileName=multicast1.txt&fileExist=Append";
+	public static final String RABBIT_MQ_MULTICAST_FILE_2 = "file:///C:/Users/Administrator?fileName=multicast2.txt&fileExist=Append";
 	public static final String SPLITTER_SOURCE_FILE = "file://src/main/resources/xml?noop=true";
 	public static final String SEDA_MQ_FILE = "file:///C:/Users/Administrator?fileName=seda.txt&fileExist=Append";
 	public static final String RABBIT_MQ_WIRETAP_SOURCE = "spring-rabbitmq:amq.direct?queues=%s&routingKey=%s";
@@ -21,4 +23,7 @@ public class Constants {
 	public static final String SPLITTER_HIGH_VALUE_CUSTOMER="spring-rabbitmq:amq.direct?routingKey=splitter-route-high-queue&queues=high-queue";
 	public static final String SPLITTER_MEDIUM_VALUE_CUSTOMER="spring-rabbitmq:amq.direct?routingKey=splitter-route-medium-queue&queues=medium-queue";
 	public static final String SPLITTER_LOW_VALUE_CUSTOMER="spring-rabbitmq:amq.direct?routingKey=splitter-route-low-queue&queues=low-queue";
+	public static final String MULTICAST_ROUTE_TX_1="direct:transaction1";
+	public static final String MULTICAST_ROUTE_TX_2="direct:transaction2";
+	
 }
