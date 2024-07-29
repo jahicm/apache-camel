@@ -25,5 +25,11 @@ public class Constants {
 	public static final String SPLITTER_LOW_VALUE_CUSTOMER="spring-rabbitmq:amq.direct?routingKey=splitter-route-low-queue&queues=low-queue";
 	public static final String MULTICAST_ROUTE_TX_1="direct:transaction1";
 	public static final String MULTICAST_ROUTE_TX_2="direct:transaction2";
-	
+	public static final String RABBIT_MQ_WEATHER_COUNTRY_SOURCE = "spring-rabbitmq:amq.direct?routingKey=weather-country&queues=weather-country";
+	public static final String DIRECT_DE="direct:DE";
+	public static final String DIRECT_CH="direct:CH";
+	public static final String DIRECT_GENERAL="direct:GENERAL";
+	public static final String CH_Q="spring-rabbitmq:amq.direct?routingKey=ch-queue&queues=ch-queue";
+	public static final String DE_Q="spring-rabbitmq:amq.direct?routingKey=de-queue&queues=de-queue";
+	public static final String DEFAULT_Q="spring-rabbitmq:amq.direct?routingKey=default-queue&queues=default-queue";
 }
