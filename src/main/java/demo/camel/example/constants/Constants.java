@@ -32,4 +32,8 @@ public class Constants {
 	public static final String CH_Q="spring-rabbitmq:amq.direct?routingKey=ch-queue&queues=ch-queue";
 	public static final String DE_Q="spring-rabbitmq:amq.direct?routingKey=de-queue&queues=de-queue";
 	public static final String DEFAULT_Q="spring-rabbitmq:amq.direct?routingKey=default-queue&queues=default-queue";
+	public static final String KAFKA_ENDPOINT = "kafka:%s?brokers=localhost:9092&autoOffsetReset=earliest";
+	public static final String PURCHASES="purchases";
+	public static final String PURCHASES_AUDIT="purchase-audit";
+	public static final String KAFKA_FILE = "file:///C:/Users/Administrator?fileName=purchases.txt&fileExist=Append";
 }

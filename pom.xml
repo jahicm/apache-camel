@@ -31,6 +31,7 @@
 		<java.version>21</java.version>
 		<junit.platform.version>1.6.0</junit.platform.version>
 		<camel.version>4.5.0</camel.version>
+		<cal10n-api>0.8.1</cal10n-api>
 	</properties>
 
 	<dependencies>
@@ -130,6 +131,23 @@
 			<groupId>org.glassfish.jaxb</groupId>
 			<artifactId>jaxb-runtime</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-resilience4j</artifactId>
+			<version>${camel.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.cal10n</groupId>
+			<artifactId>cal10n-api</artifactId>
+			<version>${cal10n-api}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-kafka</artifactId>
+			<version>${camel.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
