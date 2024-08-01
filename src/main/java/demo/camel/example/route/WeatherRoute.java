@@ -8,7 +8,7 @@ import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.support.DefaultMessage;
 import org.springframework.stereotype.Component;
-
+import demo.camel.example.processor.CustomProcessor;
 import java.util.Date;
 
 import static org.apache.camel.LoggingLevel.ERROR;
@@ -32,7 +32,7 @@ public class WeatherRoute extends RouteBuilder {
 		from(RABBIT_MQ_SOURCE).log(ERROR, "Before Enrichment: ${body}").unmarshal()
 				.json(JsonLibrary.Jackson, WeatherDto.class).process(this::enrichWeatherDto)
 				.log(ERROR, "After Enrichment: ${body}").marshal().json(JsonLibrary.Jackson, WeatherDto.class)
-				.to(RABBIT_MQ_DESTINATION) // push to RabbitMQ queue
+				.process(new CustomProcessor()).to(RABBIT_MQ_DESTINATION) // push to RabbitMQ queue
 				.to(RABBIT_MQ_FILE);// Save to local file
 
 	}
