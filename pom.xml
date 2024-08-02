@@ -32,6 +32,9 @@
 		<junit.platform.version>1.6.0</junit.platform.version>
 		<camel.version>4.5.0</camel.version>
 		<cal10n-api>0.8.1</cal10n-api>
+		<testcontainers.version>1.19.7</testcontainers.version>
+		<junit.platform.version>1.10.2</junit.platform.version>
+		<junit-vintage-engine>5.10.2</junit-vintage-engine>
 	</properties>
 
 	<dependencies>
@@ -147,7 +150,29 @@
 			<artifactId>camel-kafka</artifactId>
 			<version>${camel.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>testcontainers</artifactId>
+			<version>${testcontainers.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${testcontainers.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>rabbitmq</artifactId>
+			<version>${testcontainers.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
